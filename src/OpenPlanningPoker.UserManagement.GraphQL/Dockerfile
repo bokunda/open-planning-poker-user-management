@@ -15,7 +15,7 @@ COPY ["Directory.Packages.props", "."]
 COPY ["src/OpenPlanningPoker.UserManagement.GraphQL/OpenPlanningPoker.UserManagement.GraphQL.csproj", "src/OpenPlanningPoker.UserManagement.GraphQL/"]
 RUN dotnet restore "./src/OpenPlanningPoker.UserManagement.GraphQL/OpenPlanningPoker.UserManagement.GraphQL.csproj"
 COPY . .
-WORKDIR "/src/OpenPlanningPoker.UserManagement.GraphQL"
+WORKDIR "/src/src/OpenPlanningPoker.UserManagement.GraphQL"
 RUN dotnet build "./OpenPlanningPoker.UserManagement.GraphQL.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
